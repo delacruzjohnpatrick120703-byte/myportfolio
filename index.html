@@ -621,154 +621,86 @@
         }
       
     
-       #certifications {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       }
-
-       #certifications .card {
-       width: 100%;
-       max-width: 1500px;  
-       margin: 0 auto;
-       background: var(--bg-card);
-       border: 1px solid var(--border);
-       border-radius: 16px;
-       padding: 45px;
-       position: relative;
-       overflow: hidden;
-       }
-
-       #certifications .card::before {
-       content: "";
-       position: absolute;
-       inset: 0;
-
-       background: radial-gradient(
-        circle at top right,
-        rgba(59, 130, 246, 0.22),
-        transparent 60%
-       );
-
-        z-index: 0;
-       }
-
-
-       #certifications .card > * {
-       position: relative;
-       z-index: 1;
-       }
-
-
-      .certificate-item {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       gap: 25px;
-       padding: 18px 0;
-       border-bottom: 1px solid var(--border);
-       }
-
-       .certificate-item:last-child {
-       border-bottom: none;
-       }
-
-
-       @media (max-width: 768px) {
-       #certifications .card {
-        padding: 25px;
-      }
-
-    .certificate-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-
-    #contact {
+#certifications {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    }
+    align-items: left-side;
+}
 
-
-.contact-card {
+#certifications .card {
     width: 100%;
-    max-width: 1200px;   /* MUCH WIDER */
+    max-width: 1500px;  
     margin: 0 auto;
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 40px;
+    border-radius: 16px;
+    padding: 45px;
     position: relative;
     overflow: hidden;
 }
 
+#certifications .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-.contact-card h3 {
-    text-align: center;
-    margin-bottom: 30px;
+    background: radial-gradient(
+        circle at top right,
+        rgba(59, 130, 246, 0.22),
+        transparent 60%
+    );
+
+    z-index: 0;
 }
 
 
-.contact-methods {
+#certifications .card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.certificate-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
 }
 
-
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    flex: 1;              
-    min-width: 180px;     
-}
-
-
-.contact-icon {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(59, 130, 246, 0.10);
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-
-.contact-details p {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 1px;
-}
-
-.contact-details a {
-    font-size: 0.95rem;
-    color: #fff;
-    text-decoration: none;
-}
-
-.contact-details a:hover {
-    color: var(--accent);
+.certificate-item:last-child {
+    border-bottom: none;
 }
 
 
 @media (max-width: 768px) {
-    .contact-methods {
-        flex-direction: column;
-        gap: 20px;
+    #certifications .card {
+        padding: 25px;
     }
+
+    .certificate-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+.contact-card {
+    width: 100%;
+    max-width: none; /* remove limit */
+    margin: 0 auto;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    padding: 40px 60px;
+
+    position: relative;
+    overflow: hidden;
+
+    
 }
 
 
@@ -793,7 +725,8 @@
 .card:hover {
     border-color: rgba(59, 130, 246, 0.35);
 }
-
+```
+```css id="unifiedCardStyle"
 
 
 .card,
@@ -836,7 +769,7 @@
     position: relative;
     z-index: 1;
 }
-
+```css id="gradientOnlySystem"
 
 
 
@@ -958,7 +891,7 @@
             </div>
             <!-- Education Placeholder Picture Box -->
             <div class="education-image-box">
-                <img src="https://lh3.google.com/u/0/d/11wAPcXPCRLmFnOtCtu8n1oFsnt6eXDUF=w1910-h915-iv1?auditContext=prefetch">
+                <img src="gradpic1.jpg" alt="education">
             </div>
         </div>
     </section>

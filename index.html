@@ -310,23 +310,12 @@
     box-shadow: none;
 }
 
-      .education-image-box {
-    width: 100%;
-    max-width: 620px;   /* controls size */
-    height: auto;
-    border: none;
-    background: transparent;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
+   
 
 .education-image-box img {
-    width: 100%;
+    width: 118%;
     height: auto;
-    object-fit: contain; /* keeps full image visible */
+    
 }
 
         .card {
@@ -399,6 +388,12 @@
                 grid-template-columns: 1fr 1fr;
             }
         }
+		.skills-block {
+    background: transparent;   /* removes box */
+    border: none;              /* removes border */
+    padding: 0;                /* removes card spacing */
+    box-shadow: none;          /* removes glow/shadow */
+}
 
         .skills-block h3 {
             font-size: 1.25rem;
@@ -406,6 +401,9 @@
             color: #fff;
             font-weight: 600;
         }
+		.skills-grid {
+    gap: 60px; /* adds spacing between Technical & Professional */
+}
 
         .tags-container {
             display: flex;
@@ -929,7 +927,7 @@
             </div>
             <!-- Education Placeholder Picture Box -->
             <div class="education-image-box">
-                <img src="gradpic1.jpg" alt="education">
+                <img src="https://lh3.google.com/u/0/d/11wAPcXPCRLmFnOtCtu8n1oFsnt6eXDUF=w1910-h915-iv1?auditContext=prefetch">
             </div>
         </div>
     </section>

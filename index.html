@@ -310,7 +310,25 @@
     box-shadow: none;
 }
 
-      
+      .education-image-box {
+    width: 100%;
+    max-width: 420px;   /* controls size */
+    height: auto;
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.education-image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* keeps full image visible */
+    border-radius: 12px;  /* optional soft corners */
+}
 
         .card {
             background: var(--bg-card);

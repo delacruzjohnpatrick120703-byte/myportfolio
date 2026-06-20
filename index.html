@@ -296,7 +296,7 @@
 
         .education-image-box {
             width: 100%;
-            height:550px;
+            height:500px;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 16px;
@@ -620,47 +620,269 @@
             }
         }
       
+    
+       #certifications {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       }
+
+       #certifications .card {
+       width: 100%;
+       max-width: 1500px;  
+       margin: 0 auto;
+       background: var(--bg-card);
+       border: 1px solid var(--border);
+       border-radius: 16px;
+       padding: 45px;
+       position: relative;
+       overflow: hidden;
+       }
+
+       #certifications .card::before {
+       content: "";
+       position: absolute;
+       inset: 0;
+
+       background: radial-gradient(
+        circle at top right,
+        rgba(59, 130, 246, 0.22),
+        transparent 60%
+       );
+
+        z-index: 0;
+       }
+
+
+       #certifications .card > * {
+       position: relative;
+       z-index: 1;
+       }
+
+
       .certificate-item {
        display: flex;
        justify-content: space-between;
        align-items: center;
-       gap: 30px;
-       padding: 25px 0;
+       gap: 25px;
+       padding: 18px 0;
        border-bottom: 1px solid var(--border);
-        }
+       }
 
        .certificate-item:last-child {
-        border-bottom: none;
-        }
-
-       .cert-name {
-       display: block;
-       font-size: 1.05rem;
-       font-weight: 600;
-       color: #fff;
+       border-bottom: none;
        }
 
-       .cert-meta {
-       margin-top: 6px;
-       color: var(--text-muted);
-       font-size: 0.9rem;
-       }
-
-       #certifications .card {
-       max-width: 900px;
-       margin: 0 auto;
-       }
-
-       #certifications .project-link {
-       white-space: nowrap;
-       }
 
        @media (max-width: 768px) {
-       .certificate-item {
-          flex-direction: column;
-          align-items: flex-start;
-         }
-       }
+       #certifications .card {
+        padding: 25px;
+      }
+
+    .certificate-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+
+    #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+
+.contact-card {
+    width: 100%;
+    max-width: 1200px;   /* MUCH WIDER */
+    margin: 0 auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.contact-card h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.contact-methods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;              
+    min-width: 180px;     
+}
+
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.10);
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+
+.contact-details p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.contact-details a {
+    font-size: 0.95rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: var(--accent);
+}
+
+
+@media (max-width: 768px) {
+    .contact-methods {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+}
+
+.card,
+.about-meta-box,
+.contact-card,
+.project-card,
+.education-image-box {
+    box-shadow: 0 10px 35px var(--blue-glow);
+    transition: all 0.3s ease;
+}
+
+.card:hover,
+.project-card:hover,
+.about-meta-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px var(--blue-glow-strong);
+}
+
+.card:hover {
+    border-color: rgba(59, 130, 246, 0.35);
+}
+
+
+
+.card,
+.about-meta-box,
+.project-card,
+.education-image-box,
+.skills-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card::before,
+.about-meta-box::before,
+.project-card::before,
+.education-image-box::before,
+.skills-block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at top right,
+        rgba(59, 130, 246, 0.22),
+        transparent 60%
+    );
+
+    z-index: 0;
+}
+
+.card > *,
+.about-meta-box > *,
+.project-card > *,
+.education-image-box > *,
+.skills-block > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.contact-card,
+.card,
+.project-card,
+.about-meta-box,
+.education-image-box,
+.skills-block,
+#certifications .card {
+    box-shadow: none !important;
+}
+
+
+.contact-card::before,
+.card::before,
+.project-card::before,
+.about-meta-box::before,
+.education-image-box::before,
+.skills-block::before,
+#certifications .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at top right,
+        rgba(59, 130, 246, 0.25),  /* BLUE */
+        transparent 65%
+    );
+
+    z-index: 0;
+}
+
+
+.contact-card > *,
+.card > *,
+.project-card > *,
+.about-meta-box > *,
+.education-image-box > *,
+.skills-block > *,
+#certifications .card > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 
 
@@ -730,13 +952,13 @@
                 <h3 class="card-title">Bachelor of Science in Information Technology</h3>
                 <div class="card-subtitle">Bulacan State University</div>
                 <ul class="card-list">
-                    Specialization in Business Analytics
+                    major in Business Analytics
                     <li>Specialized study in business intelligence, database architecture, and analytics workflows</li>
                 </ul>
             </div>
             <!-- Education Placeholder Picture Box -->
             <div class="education-image-box">
-                <img src="gradpic1.jpg" alt="education">
+                <img src="https://lh3.google.com/u/0/d/11wAPcXPCRLmFnOtCtu8n1oFsnt6eXDUF=w1910-h915-iv1?auditContext=prefetch">
             </div>
         </div>
     </section>
@@ -926,7 +1148,7 @@
         <div class="certificate-item">
             <div>
                 <span class="cert-name">iLeap Course on Intellectual Property</span>
-                <p class="cert-meta">ILAW • Earned 2024</p>
+                <p class="cert-meta">iLeap • Earned 2024</p>
             </div>
             <a href="https://drive.google.com/file/d/1rMhFMB9uzWHF9_ylpw8qyG85K5lKYSyZ/view?usp=drive_link"
                target="_blank"
@@ -977,40 +1199,53 @@
 
 
 
+<section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Let's collaborate on data solutions.</h3>
-                <div class="contact-methods">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <p>Email</p>
-                            <a href="mailto:delacruzjohnpatrick120703@gmail.com">delacruzjohnpatrick120703@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
-                        <div class="contact-details">
-                            <p>LinkedIn</p>
-                            <a href="https://www.linkedin.com/in/john-patrick-dela-cruz-455665417?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">John Patrick Dela Cruz</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-brands fa-facebook"></i></div>
-                        <div class="contact-details">
-                            <p>Facebook</p>
-                            <a href="https://www.facebook.com/share/1YkSdHvyYc/?mibextid=wwXIfr" target="_blank">Connect Profile</a>
-                        </div>
+    <div class="contact-wrapper">
+
+        <div class="contact-card">
+            <h3>Let's collaborate on data solutions.</h3>
+
+            <div class="contact-methods">
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <p>Email</p>
+                        <a href="mailto:delacruzjohnpatrick120703@gmail.com">
+                            delacruzjohnpatrick120703@gmail.com
+                        </a>
                     </div>
                 </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                    <div class="contact-details">
+                        <p>LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/john-patrick-dela-cruz-455665417" target="_blank">
+                            John Patrick Dela Cruz
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="contact-details">
+                        <p>Facebook</p>
+                        <a href="https://www.facebook.com/share/1YkSdHvyYc/" target="_blank">
+                            Patrick Angeles Dela Cruz
+                        </a>
+                    </div>
+                </div>
+
             </div>
-          
         </div>
-    </section>
+
+    </div>
+</section>
+
+
 
     <!-- Footer -->
     <footer>
